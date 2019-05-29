@@ -51,7 +51,7 @@ public class MenuScreen implements Screen {
         fnt.setColor(colorWhite);
         fnt.draw(batch, "This is not a Joke", 200, 260);
         fnt.setColor(colorRed);
-        fnt.draw(batch,"CLICK ANYWHERE to PLAY", 50, 190);
+        fnt.draw(batch,"CLICK ANYWHERE TO PLAY", 50, 190);
         batch.end();
          if (Gdx.input.isTouched()) {
              introMusic.stop();

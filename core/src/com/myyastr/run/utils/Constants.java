@@ -60,9 +60,9 @@ public class Constants {
     public static float RUNNER_GRAVITY_SCALE = 3f;
 
 
-    // BADDIES
+    // ENEMIES
 
-    public static final float ENEMY_X = 25f; //ennemy appears on the right of the screen
+    public static final float ENEMY_X = 25f; //enemy appears on the right of the screen
     public static final float ENEMY_DENSITY = RUNNER_DENSITY;
     public static final float RUNNING_SHORT_ENEMY_Y = 1.5f;
     public static final float RUNNING_LONG_ENEMY_Y = 2f;
