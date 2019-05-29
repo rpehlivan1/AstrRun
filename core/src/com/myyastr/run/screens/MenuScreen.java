@@ -14,7 +14,6 @@ public class MenuScreen implements Screen {
 
     private SpriteBatch batch;
     private BitmapFont fnt;
-    private BitmapFont defaultFnt;
     private Color colorRed;
     private Color colorWhite;
     private Color colorBlue;
@@ -25,7 +24,6 @@ public class MenuScreen implements Screen {
     public MenuScreen(Game gam) {
         this.batch = new SpriteBatch();
         this.fnt = new BitmapFont(Gdx.files.internal("fonts/myFont.fnt"));
-        this.defaultFnt = new BitmapFont();
         this.colorRed = new Color(1, 0, 0, 1);
         this.colorWhite = new Color(1, 1,1 ,1);
         this.colorBlue = new Color(0,0,1,1);
@@ -42,19 +40,18 @@ public class MenuScreen implements Screen {
     }
 
 
+
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(0,0,0.0f,1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         fnt.setColor(colorBlue);
-        fnt.draw(batch, "Best Running Game Ever", 100, 350);
+        fnt.draw(batch, "ASTRO RUN", 50, 350);
         fnt.setColor(colorWhite);
         fnt.draw(batch, "This is not a Joke", 200, 260);
         fnt.setColor(colorRed);
-        fnt.draw(batch,"CLICK", 400, 190);
-        defaultFnt.draw(batch, "TO", 400, 130);
-        defaultFnt.draw(batch, "PLAY", 400,90);
+        fnt.draw(batch,"CLICK ANYWHERE to PLAY", 50, 190);
         batch.end();
          if (Gdx.input.isTouched()) {
              introMusic.stop();
