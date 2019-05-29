@@ -292,7 +292,8 @@ public class GameStage extends Stage implements ContactListener {
 
         UserData bodyData = (UserData) body.getUserData();
         if (bodyData != null && bodyData.isFlaggedForDeletion() == true) {
-            if (BodyUtils.bodyIsCoin(body) && GameManager.getInstance().getGameState() == GameState.RUNNING)
+            if (BodyUtils.bodyIsCoin(body) && GameManager.getInstance().getGameState()
+                    == GameState.RUNNING)
                 createCoin();
             world.destroyBody(body);
 
@@ -309,7 +310,7 @@ public class GameStage extends Stage implements ContactListener {
 
         Difficulty currentDifficulty = GameManager.getInstance().getDifficulty();
 
-        // 8 is arbitrary.
+
         if (totalTimePassed > GameManager.getInstance().getDifficulty().getLevel() * 8) {
 
             int nextDifficulty = currentDifficulty.getLevel() + 1;
